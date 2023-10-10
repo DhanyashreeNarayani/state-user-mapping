@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  postgres:
+    container_name: postgress-app
+    build:
+      context: ./postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+  node-app:
+    container_name: node-app
+    build:
+      context: ./node-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+# Docker Networks
+networks:
+  app-network:
+    driver: bridge

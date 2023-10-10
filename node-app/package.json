@@ -1,0 +1,21 @@
+{
+  "name": "state-and-user-geolocation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.5.2",
+    "csv-parser": "^3.0.0",
+    "express": "^4.17.1",
+    "pg-promise": "^11.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "typescript": "^5.2.2"
+  }
+}

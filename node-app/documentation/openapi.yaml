@@ -1,0 +1,108 @@
+openapi: 3.0.0
+info:
+  title: APIs for state and user geolocation
+  description: APIs for state and user geolocatio
+  version: "1"
+servers:
+  - url: http://{host}
+    description: SwaggerHub API
+    variables:
+      host:
+        description: This value is assigned by the user.
+        default: localhost
+paths:
+  /users-by-stateId/{stateId}:
+    get:
+      summary: get users in a particular state based on stateId
+      parameters:
+        - name: stateId
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: number
+      responses:
+        200:
+          description: JSON response containing the status - 200
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: success
+                  data:
+                    type: object
+                    properties:
+                      users:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            user_id:
+                              type: number
+                            firstname:
+                              type: string
+                            lastname:
+                              type: string
+                            location:
+                              type: string
+        500:
+          description: JSON response containing the status - 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    properties:
+                      error:
+                        type: object
+  /states:
+    get:
+      summary: get list of states
+      responses:
+        200:
+          description: JSON response containing the status - 200
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: success
+                  data:
+                    type: object
+                    properties:
+                      states:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            ogc_fid:
+                              type: number
+                            name:
+                              type: string
+
+        500:
+          description: JSON response containing the status - 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    properties:
+                      error:
+                        type: object
