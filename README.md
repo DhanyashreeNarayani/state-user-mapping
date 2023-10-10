@@ -71,6 +71,6 @@ Import the following files into the db through pgadmin
 
 I have attached a sample code `basic_cloudformation_template.yaml` containing the example configuration for the AWS cloudformation. Below attached is the system architecture diagram for the same.
 
-![alt text]
+![alt text](https://github.com/DhanyashreeNarayani/state-user-mapping/blob/main/standard-eip.png)
 
 [node]: https://nodejs.org/en/
