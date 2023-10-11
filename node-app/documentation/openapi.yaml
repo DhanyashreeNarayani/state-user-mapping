@@ -9,7 +9,7 @@ servers:
     variables:
       host:
         description: This value is assigned by the user.
-        default: localhost
+        default: localhost:3000
 paths:
   /users-by-stateId/{stateId}:
     get:
