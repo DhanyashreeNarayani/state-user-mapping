@@ -25,12 +25,12 @@ To run the docker image,
 
 #### Import data
 
-Import the following files into the db through pgadmin
+Db script to import data to postgres
 
 ```
-+-- postgres
-    +-- state.csv
-    +-- user_table.csv
++-- node-app
+    +-- src
+        +-- scripts
 ```
 
 #### APIS
