@@ -7,4 +7,5 @@ const pgp = require('pg-promise')();
 //     password: 'password'
 // });
 const db = pgp('postgres://postgres:password@postgress-app:5432/geodata');
+
 module.exports = db;
